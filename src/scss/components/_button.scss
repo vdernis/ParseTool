@@ -1,0 +1,32 @@
+.pt-btn {
+  display:inline-block;
+  padding:theme-padding();
+  border-radius: 4px;
+  font-size: text-scale("sm");
+  color:theme-shade("black");
+  margin-right:4px;
+  line-height:0;
+
+  &--primary {
+  	background-color: theme-color("primary", "light");
+  	&:hover {
+  		background-color:theme-color("primary", "dark");
+		color:theme-color("primary", "light");
+  	}
+  }
+
+  &--disabled {
+  	background-color:theme-feedback("disabled");
+	color:theme-color("primary", "dark");
+  }
+
+  &--selected {
+  	background-color:theme-feedback("success");
+	color:theme-color("primary", "dark");
+  }
+}
+
+.pt-btn > img {
+	width:16px;
+	height:auto;
+}

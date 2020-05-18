@@ -1,0 +1,30 @@
+.pt-toolbar {
+  display:flex;
+  position:fixed;
+  flex-direction:column;
+  font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+  font-size:text-scale("xs");
+  color:theme-shade();
+  width:400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color:theme-shade("1");
+  z-index: 10000000;
+}
+
+.pt-toolbar__header {
+  display:flex;
+  height:50px;
+  padding:5px;
+  justify-content: space-between;
+  align-items:center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color:theme-shade("black");
+}
+
+.pt-toolbar__logo {
+  font-size:text-scale("sm");
+  color:theme-shade("white");
+  font-family: Arial,Helvetica Neue,Helvetica,sans-serif; 
+}

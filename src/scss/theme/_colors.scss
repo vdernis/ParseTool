@@ -1,0 +1,58 @@
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+@function theme-color($key: 'primary', $variant: 'base') {
+  $map: map-get($theme-colors, $key);
+  @return map-get($map, $variant);
+}
+
+@function theme-shade($key: 'black') {
+  @return map-get($theme-shades, $key);
+}
+
+@function theme-feedback($key: 'info') {
+  @return map-get($theme-feedback, $key);
+}
+
+
+$theme-colors: (
+  'primary': (
+    'base': #4D84F4,
+    'light': tint( #4D84F4, 15% ),
+    'dark': shade( #4D84F4, 15% ),
+    'bg': rgba(#4D84F4, .2 )
+  ),
+  'accent': (
+    'base': #f5414f,
+    'light': tint( #f5414f, 15% ),
+    'dark': shade( #f5414f, 10% ),
+    'bg': rgba(#f5414f, .2 )
+  ),
+);
+
+$theme-shades: (
+  'black': #1d1d21,
+  '10': #2e2e31,
+  '6': #7b7a7d,
+  '4': #a5a5a6,
+  '3': #bbbbbc,
+  '2': #d1d0d2,
+  '1': #e8e7e8,
+  'white': white
+);
+
+$theme-feedback: (
+  'info': #4D84F4,
+  'success': #88c459,
+  'error': #f5414f,
+  'warning':#ffd137,
+  'disabled': #D3D3D3 
+);
+
+
+

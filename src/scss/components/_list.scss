@@ -1,0 +1,28 @@
+.pt-list {
+	display:flex;
+	flex-direction:column;
+	padding: theme-padding();
+	max-height:200px;
+	overflow-y:scroll;
+}
+
+.pt-list__item {
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content: space-between;
+	padding:theme-padding("xs");
+
+}
+
+.pt-list__item:nth-child(even){
+	background-color:theme-shade("2");
+}
+
+.pt-list__name {
+	width:80%;
+}
+
+.pt-list__count {
+	width:5%;
+}

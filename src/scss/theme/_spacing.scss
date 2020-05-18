@@ -1,0 +1,14 @@
+$base-space: 1; // rem
+
+$theme-padding: (
+	'base': $base-space + rem,
+	'xs': ($base-space * 0.5) + rem,
+	'sm': ($base-space * 0.75) + rem,
+	'md': ($base-space * 1.25) + rem,
+	'lg': ($base-space * 2) + rem,
+	'xl': ($base-space * 3.25) + rem
+);
+
+@function theme-padding($key: 'sm') {
+  @return map-get($theme-padding, $key);
+}
